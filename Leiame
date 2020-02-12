@@ -1,0 +1,54 @@
+Este exemplo é bem simples e apenas usou uma biblioteca de quiz e adicionou ao reveals.
+
+Ele está disponível em: https://gitlab.com/oer/reveal.js-quiz/-/tree/master
+
+
+Segue outras observações que também estão na página.
+
+
+A quiz-plugin for reveal.js
+This plugin provides the functionality of dynamic single- and multiple-choice quizzes for reveal.js-presentations. It is basically a reveal.js-friendly wrapper for SlickQuiz. SlickQuiz is a generic jQuery plugin for quizzes, which was originally created by Julie Cameron while previously employed at Quicken Loans. Some default values were changed to be more friendly for presentations and reveal.js-hooks for layouting were implemented. Also, quizzes can be added to presentations very easily by just providing a JSON-String that defines the quiz.
+
+Usage
+First, download this repository and include the files in the plugin folder in your reveal.js-configuration. Then include the plugin in the dependencies section when initializing Reveal, including the callback:
+Reveal.initialize({
+    dependencies: [
+        // other dependencies
+        { src: 'plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({}); } }
+        // other dependencies
+    ]
+});
+For each quiz you want to use, just include a <script data-quiz>-Tag with a quiz object as follows:
+<script data-quiz>
+    quiz = {
+            "info": {
+                    "name":    "Test Your Knowledge!!",
+                    "main":    "Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!",
+                    "level1":  "Jeopardy Ready",
+                    "level2":  "Jeopardy Contender",
+                    "level3":  "Jeopardy Amateur",
+                    "level4":  "Jeopardy Newb",
+                    "level5":  "Stay in school, kid..." // no comma here
+            },
+            "questions": [
+                    { // Question 1 - Multiple Choice, Single True Answer
+                            "q": "What number is the letter A in the English alphabet?",
+                            "a": [
+                                    {"option": "8",      "correct": false},
+                                    {"option": "14",     "correct": false},
+                                    {"option": "1",      "correct": true},
+                                    {"option": "23",     "correct": false} // no comma here
+                            ],
+                            "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
+                            "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
+                    },
+                    // more questions here
+            ]
+    }
+</script>
+Alternatively, you may want to maintain quizzes in separate files,
+to be included with src attributes:
+<script data-quiz src="./quizzes/sample-quiz.js"></script>
+If you want to embed multiple quizzes in a single presentation, each
+quiz object needs to have a different name, e.g.,
+<script data-quiz="quiz1" src="./quizzes/sample-quiz.js"></script>
