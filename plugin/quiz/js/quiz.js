@@ -87,7 +87,7 @@ function createQuizStructure(quizNode, classname) {
           <div class="quizArea">
               <div class="quizHeader">
                   <!-- where the quiz main copy goes -->
-                  <a class="button startQuiz" href="#">Get Started!</a>
+                  <a class="button startQuiz" href="#">Iniciar!</a>
               </div>
               <!-- where the quiz gets built -->
           </div>
