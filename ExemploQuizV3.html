@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Tema de aula: vírus</h3>
+					<center> <img src="https://media.giphy.com/media/vO2ByH5dWCJEc/giphy.gif" width="20%"  > </center>
+						<ul>
+							<li>O que é um vírus?</li>
+							
+							<ul>
+								<li>Quais as estruturas de um vírus</li>
+							</ul>
+							<li>Como se propagam os vírus?</li>
+							<li>O que é o Covid-19?</li>
+						</ul>
+					</ul>
+					<p>
+					Prof. Álvaro 
+					</p>
+				</section>
+
+
+				<section data-background-transition="slide" data-background="https://media.giphy.com/media/WmpCU6NcfeCIq7dg6Q/giphy.gif">
+					<h3>Exemplo com imagem de fundo!</h3>
+					
+					<p>
+					Parabéns!<br>
+					Você está indo bem!
+					
+					</p>
+				</section>
+				
+				
+				<section data-background-transition="slide" data-background="https://media.giphy.com/media/WmpCU6NcfeCIq7dg6Q/giphy.gif">
+					<h3>Exemplo com video do youtube!</h3>
+					
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ptbk2af68e8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					</p>
+				</section>
+				
+				
+				<section>
+					<script data-quiz>
+						quiz = {
+								"info": {
+										"name":    "Questionário de exemplo!",
+										"main":    "",
+										"level1":  "Excelente",
+										"level2":  "Ótimo",
+										"level3":  "Bom",
+										"level4":  "Regular",
+										"level5":  "Estude mais..." // no comma here
+								},
+								"questions": [
+										{ // Question 1 - Multiple Choice, Single True Answer
+												"q": "Quanto é 2 -1 ?",
+												"a": [
+														{"option": "8",      "correct": false},
+														{"option": "14",     "correct": false},
+														{"option": "1",      "correct": true},
+														{"option": "23",     "correct": false} // no comma here
+												],
+												"correct": "<p><span>Parabéns!</span> Você acertou!  </p>",
+												"incorrect": "<p><span>Hoo não.</span> Você precisa estudar mais sobre a soma. A resposta é <em>1</em> Entendeu?</p>" // no comma here
+										},
+										{ // Question 1 - Multiple Choice, Single True Answer
+												"q": "Qual é o nome científico do popular Coronavirus? <img  width=3%  src=./imagens/logo_sbc.png >",
+												"a": [   // 
+														{"option": "8  <center> <img width=5% src=./imagens/logo_sbc.png > </center> ",      "correct": false},
+														{"option": "14",     "correct": false},
+														{"option": "1",      "correct": true},
+														{"option": "23",     "correct": false} // no comma here
+												],
+												"correct": "<p>Local onde devo colocar a mensagem de reposta certa.</p>",
+												"incorrect": "<p>Local onde devo colocar a mensagem de reposta <span>errada.</span>.</p>" // no comma here
+										},
+										// more questions here
+								]
+						}
+					</script>
+					
+				</section>
+				<section>Material extras
+					<p>
+						<ul>
+							<li>Elemento 1</li>
+							<li>Elemento 2</li>
+						</ul>
+
+					</p>
+				</section>
+				<section>Referências:
+					<p>
+						<ul>
+							<li>Elemento 1</li>
+							<li>Elemento 2</li>
+						</ul>
+
+					</p>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({}); } },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
